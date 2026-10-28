@@ -1,6 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #621402;
     font-family: "Roboto", sans-serif;
+    color: #fff;
 }
 
 .container {
@@ -9,13 +20,22 @@ body {
 }
 
 .header {
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url('../img/bg.png') no-repeat center top / cover;
+}
+
+.navbar {
     display: flex;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .menu {
     list-style-type: none;
     display: flex;
+    margin: 0;
+    margin-left: 17px;
 }
 
 .menu-item {
@@ -27,16 +47,149 @@ body {
     text-decoration: none;
 }
 
-.avatar {
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-}
-
 .user {
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 10px; 
-    color: white;
+}
+
+.avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-left: 11px;
+}
+
+.film {
+    margin-top: 60px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.film-info {
+    max-width: 560px;
+}
+
+.film-title-small {
+    opacity: 0.5;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.film-title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 11px;
+    margin-bottom: 23px;
+}
+
+.film-description {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.film-details {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time-icon {
+    margin-right: 14px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+}
+
+.rating-icon {
+    margin-right: 14px;
+}
+
+.rating-current {
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.film-trailer {
+    margin: auto;
+}
+
+.session {
+    margin-top: 62px;
+    padding-top: 46px;
+    padding-bottom: 63px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.session-date, 
+.session-cinema, 
+.session-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-label {
+    margin-bottom: 14px;
+}
+
+.session-date-block {
+    display: flex;
+}
+
+.session-date-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.session-month {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.session-day {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.session-week {
+    font-size: 19px;
+    line-height: 22px;
+}
+
+.session-date-item:hover {
+    background-color: #fe8e05;
+    color: #621402;
+}
+
+.select {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: #fff;
+    padding: 18px;
+    outline: none;
 }
